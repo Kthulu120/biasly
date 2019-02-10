@@ -29,7 +29,7 @@ export default function () {
         console.log(document);
         let posts = document.getElementsByClassName("tweet")
         console.log(posts)
-        for(let i =0; i < posts.length; i++){
+        for(let i =0; i < posts.length && i < 5; i++){
           setTimeout(() => {
             try {
               let data = httpGet('https://cors-anywhere.herokuapp.com/http://34.73.188.127/isBias/' + posts[i].getElementsByClassName('tweet-text')[0].innerText);
